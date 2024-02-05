@@ -52,7 +52,6 @@ if __name__ == "__main__":
     
     
     
-    print(root.get_width(),root.get_height())
     mainloop()
     
             
