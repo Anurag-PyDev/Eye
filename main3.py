@@ -73,22 +73,22 @@ def blits():
 
 def look():
     squishX = 10
-    squishY = 5
-    stepX = 15
-    stepY = 10
+    squishY = 6
+    stepX = 25
+    stepY = 14
     keys = key.get_pressed()
-    if e1.x>500:
-        e1.x=500
-        e1.w=200
+    if e1.x>500+5*squishX:
+        e1.x=500+5*squishX
+        e1.w=eyeW-10*squishX
     elif e1.x<0:
         e1.x=0
-        e1.w=200
+        e1.w=eyeW-10*squishX
 
     if keys[K_LEFT]:
         if 0<=e1.x<250:
             e1.x-=stepX
             e1.w-=squishX   
-        elif 250<=e1.x<=500:
+        elif 250<=e1.x<=500+10*squishX:
             e1.x-=stepX+squishX
             e1.w+=squishX
     if keys[K_RIGHT]:
@@ -96,46 +96,46 @@ def look():
             e1.x+=stepX
             e1.w+=squishX  
 
-        elif 250<=e1.x<=500:
+        elif 250<=e1.x<=500+10*squishX:
             e1.x+=stepX+squishX
             e1.w-=squishX
     
     if e1.y>280:
         e1.y=280
-        e1.h=eyeH-28
+        e1.h=eyeH-10*squishY
     elif e1.y<0:
         e1.y=0
-        e1.h=eyeH-28
+        e1.h=eyeH-10*squishY
 
     if keys[K_UP]:
         if 0<=e1.y<140:
             e1.y-=stepY
             e1.h-=squishY
-        elif 140<=e1.y<=280:
+        elif 140<=e1.y<=280+10*squishY:
             e1.y-=stepY+squishY
             e1.h+=squishY
     if keys[K_DOWN]:
         if 0<=e1.y<140:
             e1.y+=stepY
             e1.h+=squishY
-        elif 140<=e1.y<=280:
+        elif 140<=e1.y<=280+10*squishY:
             e1.y+=stepY+squishY
             e1.h-=squishY
     
 
     # for e2
-    if e2.x>500:
-        e2.x=500
-        e2.w=200
+    if e2.x>500+5*squishX:
+        e2.x=500+5*squishX
+        e2.w=eyeW-10*squishX
     elif e2.x<0:
         e2.x=0
-        e2.w=200
+        e2.w=eyeW-10*squishX
 
     if keys[K_LEFT]:
         if 0<=e2.x<250:
             e2.x-=stepX
             e2.w-=squishX   
-        elif 250<=e2.x<=500:
+        elif 250<=e2.x<=500+10*squishX:
             e2.x-=stepX+squishX
             e2.w+=squishX
     if keys[K_RIGHT]:
@@ -143,29 +143,29 @@ def look():
             e2.x+=stepX
             e2.w+=squishX  
 
-        elif 250<=e2.x<=500:
+        elif 250<=e2.x<=500+10*squishX:
             e2.x+=stepX+squishX
             e2.w-=squishX
     
     if e2.y>280:
         e2.y=280
-        e2.h=eyeH-28
+        e2.h=eyeH-10*squishY
     elif e2.y<0:
         e2.y=0
-        e2.h=eyeH-28
+        e2.h=eyeH-10*squishY
 
     if keys[K_UP]:
         if 0<=e2.y<140:
             e2.y-=stepY
             e2.h-=squishY
-        elif 140<=e2.y<=280:
+        elif 140<=e2.y<=280+10*squishY:
             e2.y-=stepY+squishY
             e2.h+=squishY
     if keys[K_DOWN]:
         if 0<=e2.y<140:
             e2.y+=stepY
             e2.h+=squishY
-        elif 140<=e2.y<=280:
+        elif 140<=e2.y<=280+10*squishY:
             e2.y+=stepY+squishY
             e2.h-=squishY
   
